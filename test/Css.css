@@ -1,0 +1,388 @@
+body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    background-color: #171212; /* Ajustez cette couleur pour correspondre à votre conception */
+    font-family: Arial, sans-serif;
+    color: white;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 1rem; /* padding horizontal ajusté pour le contenu de la barre de navigation */
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 45px;
+    width: 97.5%;
+    background-color: black; /* Transparence maintenue */
+    z-index: 10;
+}
+
+.navbar-left {
+    display: flex;
+    padding: 8px;
+    gap: 12px; /* L'espace entre les éléments à gauche */
+}
+
+.navbar-right {
+    display: flex;
+    padding: 15px;
+    gap: 20px; /* L'espace entre les éléments à droite */
+    width: auto;
+}
+
+.navbar-right a {
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    margin-right: 10px; /* L'espace entre les liens */
+}
+      .navbar-right img{
+        display: none;
+
+      }
+      
+        .top{
+        display: inline-block;
+        border: 1px;
+        padding: 10px;
+        position: fixed;
+        bottom: 6px;
+        right: 8px;
+        z-index: 1;
+      }
+
+      
+      .content-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;        height: 100vh;
+        width:100% /* Ajustez en fonction de la hauteur désirée */
+        
+    }
+    
+    .text-content {
+       flex-basis: 37%;
+        left: 0;
+        width: 50%;
+        top: 300px;
+        padding-left: 20px;
+        color: #fff; /* Ajustez la couleur du texte en fonction de votre design */
+        z-index: 1;
+    }
+    .text-content img {
+      padding: 0;
+      width: 70%;
+      transform: translate(-15%,0%);
+
+    }
+  
+    .titrebleu {
+      padding-top: 10px;
+      color: #40B6FF ;
+
+    }
+    .text-content h2 {
+        margin: 0;
+        padding-bottom: 0.4em;
+        font-size: 1.5em; /* Ajustez la taille en fonction de votre design */
+        transform: translate(0%,-110%);
+    }
+    
+    .text-content h1 {
+        margin: 0;
+        padding-bottom: 0.4em;
+        font-size: 2.5em; /* Ajustez la taille en fonction de votre design */
+        transform: translate(0%,-30%);
+
+    }
+    
+    .text-content p {
+        font-size: 1em; /* Ajustez la taille en fonction de votre design */
+        transform: translate(0%,-50%);
+
+    }
+    
+    .text-content button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 0.6rem;
+        background-color: #6200ea; /* Ajustez la couleur du fond du bouton en fonction de votre design */
+        color: #fff;
+        font-size: 1em;
+        cursor: pointer;
+        transform: translate(0%,-60%);
+
+    }
+    
+    .video-content {
+        flex-basis: 35%;
+        position: relative;
+        width: 50%;
+        padding-top: 19.7%;
+        
+        
+    }
+    
+    .video-content img {
+      position: absolute;
+      width: 110%;
+      height: 200%;
+      opacity: 0.45; /* Adjust for desired transparency */
+      z-index: 0; /* Below the video */
+      transform: translate(-45%,-70%);
+      z-index: -2;
+      
+  }
+    .elementor-background-video-embed {
+        position: absolute;
+        
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.15);
+         /* Centre la vidéo exactement */
+         border: 1.05vw solid;
+         border-radius: 2%;
+         border-color:  rgba(255, 255, 255, 0.1);
+         
+         transform: translate(-10%,-100%);
+
+    }
+    
+  
+    .background-container  {
+      position: relative;
+      display: flex;
+      width: 85%;
+      height: 30rem;
+      padding: 50px; /* Espace autour des boîtes de service */
+
+      justify-content: space-between;
+      
+  }
+  
+  .background-container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://th.bing.com/th/id/OIG4.Xb4dW3re2Zwtpzh6si6r?pid=ImgGn') no-repeat center center / cover ;
+     
+    /* Espacement égal entre les boîtes de service */
+      
+    border: 10px solid rgba(255, 255, 255, 0.05); 
+    background-size: cover; /* pour couvrir tout l'espace disponible */
+    background-position: center; /* pour centrer l'image */
+    opacity: 0.3; /* ajustez l'opacité selon vos besoins */
+    z-index: -1; /* s'assure que le fond est derrière le contenu */
+      
+
+  }
+  .service-box {
+      align-items: stretch !important ;
+      background: rgba(255, 255, 255, 0.2); /* Boîte blanche semi-transparente */
+      border-radius: 15px; /* Bords arrondis pour les boîtes */
+      width: 28%;
+      height: 16rem;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce pour un effet de profondeur */
+      text-align: center; /* Centrer le texte dans la boîte */
+      transform: translate(0%,50%);
+      
+  } 
+  
+  .icon-container img {
+
+    width: 4rem;
+      /* Style pour la zone de l'icône / de l'image de décoration */
+      margin-bottom: 10px; /* Espace entre l'icône et le titre */
+  }
+  
+  .service-box h3 {
+      color: #ffffff; /* Couleur du titre */
+      margin: -10px 0; /* Espace autour du titre */
+  }
+  
+  .service-box h4 {
+      color: #cccccc; /* Couleur du paragraphe */
+      font-size: 1.4vw; /* Taille de la police du paragraphe */
+  }
+      
+  .clients-section {
+    text-align: center;
+    margin-bottom: 20px; /* Ajustez selon l'espacement désiré */
+  }
+  
+  .clients-title {
+    font-size: 24px; /* Ajustez la taille selon vos besoins */
+    margin-bottom: 10px; /* Ajustez l'espacement au-dessus du carrousel */
+  }
+  
+  .clients-section {
+    padding-top: 2rem;
+    max-width: 100vw;
+    overflow-x: hidden; /* Empêche le défilement horizontal au niveau de la section */
+  }
+  
+  .splide {
+    max-width: 100%;
+    margin: 0 auto; /* Centre le carrousel si moins large que l'écran */
+  }
+  
+  .splide__track {
+    overflow: hidden; /* Empêche le défilement horizontal au niveau du carrousel */
+  }
+  
+  .splide__list {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .splide__slide img {
+    background-color: #2b2626;
+
+    max-width: 100%;
+    height: auto; /* Assure que les images sont responsives et ne débordent pas */
+  }
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+  /*  carousel */
+  
+      @media(max-width:900px){
+
+        
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.4rem;
+      position: fixed;
+      align-items: center;
+      top:0px ;
+      width: 98%;
+      
+    } 
+    .navbar-left  {
+      display: flex;
+      gap: 2px;
+      padding:2px;
+      left: 0px;
+      width: 10px;
+    }
+  
+  .navbar-right {
+    display: flex;
+  position: fixed;
+  right: 8px;
+  }
+
+  .navbar-right a {
+    display: none; /* Cacher le logo et les liens pour les petits écrans */
+    }
+    .navbar-right img{
+      display: flex;
+      position: absolute;
+      right: 20px;
+      top: -6px;
+      width: 2.3rem;
+
+    }
+    .main{
+      display: flex;
+      flex-direction: column-reverse;
+      flex-wrap: wrap;
+      align-items: center; 
+      margin-top: -60px;
+      width: 100%;
+      overflow-x: hidden; 
+      padding-left: 1rem;
+    }
+
+    
+    .main-right{
+      align-items: center;
+      grid-row: 1/2;
+    }
+
+    .main-right img{
+     width: 90vw;
+
+    }
+
+    .main-left{
+      grid-row: 1/3;
+      padding-left: 0px;
+      padding-top: 10px;
+
+      width: 85vw;
+    }
+    .welcome{
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+    }
+    .main-left h1{
+      font-size: 1.3rem;
+      margin: 0.4rem 0;
+      line-height: 1.9rem;
+    }
+    .description {
+      color: #e6e5e5; /* Changez la couleur du texte selon votre choix */
+      margin-bottom: 1.2rem;
+      line-height: 20px;
+    }
+    .explore-button {
+      background-color: #ffffff; /* Changez la couleur de fond du bouton selon votre choix */
+      color: black;
+      border: none;
+      padding: 10px 30px;
+      font-size: 1.05rem;
+      border-radius: 5px; /* Arrondit les coins du bouton */
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .explore-button:hover {
+      background-color: #171212; /* Changez la couleur de fond du bouton au survol */
+    }
+      }
+
+      @media (max-width: 550px) {
+        .embed-responsive iframe {
+          transform: translateX(12%);
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border: 0;
+        }
+      }
+
+      
+
