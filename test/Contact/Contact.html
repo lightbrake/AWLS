@@ -7,23 +7,32 @@
     <title>Contact</title>
 </head>
 <body>
-    <div class="navbar">
-        <div class="navbar-left">
-            <a href="/test/Html.html"><img src="https://www.awlsprod.com/wp-content/uploads/2020/04/Design-sans-titre-12.png" alt="https://www.awlsprod.com/wp-content/uploads/2020/04/Design-sans-titre-12.png"></a>
-        </div>
-        <div class="navbar-right">
-            <a href="/test/Html.html">Acceuil</a>
-            <a href="/test/Propos/propos.html">A Propos</a>
-            <a href="/test/Services/services.html">Services</a>
-            <a href="/test/Gallery/Gallery.html">Gallery</a>
-            <a href="/test/Contact/Contact.html">Contact</a>
-            <a href="/test/Html.html"><img src="https://lh3.googleusercontent.com/drive-storage/AJQWtBPnTQQJeCuIXKWN_tB5aflVwjivc5YVNAiczpUNQ-Sg48OENIypMq6JKWxX6CLcnvdEArVNsPaMGV2fsULENfrpASCxty-MCGIackEyUg=w1310-h619" alt=""> </a>
-
-        </div>
+  <div class="navbar">
+    <div class="navbar-left">
+        <a href=""><img src="https://www.awlsprod.com/wp-content/uploads/2020/04/Design-sans-titre-12.png" alt="https://www.awlsprod.com/wp-content/uploads/2020/04/Design-sans-titre-12.png"></a>
     </div>
+    <div class="navbar-right">
+        <a href="Html.html">Acceuil</a>
+        <a href="Propos/propos.html">A Propos</a>
+        <a href="Services/services.html">Services</a>
+        <a href="Gallery/Gallery.html">Gallery</a>
+        <a href="Contact/Contact.html">Contact</a>
+        <img id="menu-icon" src="../../Content/menu-burger.png" alt=""> 
+
+    </div>
+</div>
+<div id="sidebar" class="sidebar">
+  <!-- Links for the sidebar -->
+  <a href="Html.html">Acceuil</a>
+  <a href="Propos/propos.html">A Propos</a>
+  <a href="Services/services.html">Services</a>
+  <a href="Gallery/Gallery.html">Gallery</a>
+  <a href="Contact/Contact.html">Contact</a>
+</div>
+
 <div class="contact-container">
     <div class="left-col">
-      <img class="logo" src=""/>
+      <img class="logo" src="" alt="Description of image"/>
     </div>
     <div class="right-col">
       
@@ -31,16 +40,16 @@
       <h1>Contact us</h1>
       <h2>Email</h2>
       <p>
-        <a  href="mailto:ahmed@awlsprod.com">ahmed@awlsprod.com</a> <br>        <a href="mailto:alaa@awlsprod.com">alaa@awlsprod.com</a>
+        <a class="maill"  href="mailto:ahmed@awlsprod.com">ahmed@awlsprod.com</a> <br>        <a class="maill" href="mailto:alaa@awlsprod.com">alaa@awlsprod.com</a>
       </p>
         <h2>Business Hours</h2>
-        <p>Available 24h/7</p>
+        <p class="available">Available 24h/7</p>
       
-      <form id="contact-form" method="post" >
+      <form class="formm" id="contact-form" method="post" >
         <label for="name">Full name</label>
     <input type="text" id="name" name="name" placeholder="Your Full Name" required>
 
-    <label for="phone" >Phone Number</label>
+    <label for="phone" >numéro de téléphone</label>
     <input type="text" id="phone" name="phone" placeholder="Your Phone Number" required>
 
         <label for="email">Email Address</label>

@@ -16,46 +16,65 @@
     transition: all 0.3s ease-in-out;
   }
   
-  .navbar {
-    display: flex;
-    font-family: Arial, sans-serif;
-
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.4rem 1rem; /* padding horizontal ajusté pour le contenu de la barre de navigation */
-    position: absolute;
-    top: 0px;
-    left: 0;
-    height: 45px;
-    width: 97.5%;
-    background-color: black; /* Transparence maintenue */
-    z-index: 10;
+  
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 1rem; /* padding horizontal ajusté pour le contenu de la barre de navigation */
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 45px;
+  width: 97.5%;
+  background-color: black; /* Transparence maintenue */
+  z-index: 10;
 }
 
 .navbar-left {
-    display: flex;
-    padding: 8px;
-    gap: 12px; /* L'espace entre les éléments à gauche */
+  display: flex;
+  padding: 8px;
+  gap: 12px; /* L'espace entre les éléments à gauche */
 }
 
 .navbar-right {
-    display: flex;
-    padding: 15px;
-    gap: 20px; /* L'espace entre les éléments à droite */
-    width: auto;
+  display: flex;
+  padding: 15px;
+  gap: 20px; /* L'espace entre les éléments à droite */
+  width: auto;
 }
 
 .navbar-right a {
-    padding: 5px 10px;
-    color: white;
-    text-decoration: none;
-    margin-right: 10px; /* L'espace entre les liens */
+  padding: 5px 10px;
+  color: white;
+  text-decoration: none;
+  margin-right: 10px; /* L'espace entre les liens */
 }
-      .navbar-right img{
-        display: none;
+    .navbar-right img{
+      display: none;
 
-      }
-      
+    }
+
+    .sidebar {
+      display: none; /* Hidden by default */
+      position: fixed;
+      top: 0;
+      right: -250px; /* Start off the screen */
+      width: 250px;
+      height: 100%;
+      background-color: black;
+      z-index: 11;
+      transition: right 0.3s;
+    }
+    
+    .sidebar a {
+      display: block;
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      border-bottom: 1px solid grey;
+    }
+        
 
   .contact-container {
     display: flex;
@@ -67,15 +86,17 @@
   .left-col {
     width: 45vw;
     height: auto;
-    background-image: url("https://as1.ftcdn.net/v2/jpg/04/04/41/60/1000_F_404416045_DEousJKLh6LXByj7OcDwgnQ5EHdVmPYp.jpg");
+    background-image: url('../assets/images/contact_form.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center; /* This will center the image */
+
   }
   
-  .logo {
-    width: 10rem;
-    padding: 1.5rem;
+  .left-col img {
+    display: none;
   }
+  
   
   .right-col {
     
@@ -195,70 +216,8 @@ p a {
     opacity: 0.8;
   }
   
-  /* Toggle Switch */
   
-  .theme-switch-wrapper {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    width: 160px;
-    position: absolute;
-    top: 0.5rem;
-    right: 0;
-  }
-  
-  .description {
-      margin-left: 1.25rem;
-    }
-  
-  .theme-switch {
-    display: inline-block;
-    height: 34px;
-    position: relative;
-    width: 60px;
-  }
-  
-  .theme-switch input {
-    display:none;
-  }
-  
-  .slider {
-    background-color: #ccc;
-    bottom: 0;
-    cursor: pointer;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    background-color: #fff;
-    bottom: 0.25rem;
-    content: "";
-    width: 26px;
-    height: 26px;
-    left: 0.25rem;
-    position: absolute;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: var(--button-color);
-  }
-  
-  input:checked + .slider:before {
-    transform: translateX(26px);
-  }
-  
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+ 
   
   #error, #success-msg {
     width: 40vw;
@@ -268,64 +227,125 @@ p a {
     font-family: 'Jost';
     color: var(--secondary-color);
     }
-  }
+  
   
     #success-msg {
     transition-delay: 3s;
     }
   
-  @media only screen and (max-width: 950px) {
-    .logo {
-      width: 8rem;
+  @media only screen and (max-width: 900px) {
+    body{
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
-    h1 {
-      font-size: 1.75rem;
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.4rem;
+      position: fixed;
+      align-items: center;
+      top:0px ;
+      width: 100%;
+      height: 5%;
+      
+    } 
+    .navbar-left  {
+      display: flex;
+      gap: 2px;
+      padding:2px;
+      left: 0px;
+      width: 10px;
     }
-    p {
-      font-size: 0.7rem;
-    }
-    input, textarea, button {
-      font-size: 0.65rem;
-    }
-    .description {
-      font-size: 0.3rem;
-      margin-left: 0.4rem;
-    }
-    button {
-      width: 7rem;
-    }
-    .theme-switch-wrapper {
-      width: 120px;
-    }
-    .theme-switch {
-    height: 28px;
-    width: 50px;
-  }
   
-  .theme-switch input {
-    display:none;
+  .navbar-right {
+    display: flex;
+  position: fixed;
+  right: 8px;
   }
+
+  .navbar-right a {
+    display: none; /* Cacher le logo et les liens pour les petits écrans */
+    }
+    .navbar-right img{
+      display: block; /* Show hamburger icon */
+      cursor: pointer;
+     
+
+    }
+    .sidebar{
+      display: block;
+      font-size:1.5rem;
+    }
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   
-  .slider:before {
-    background-color: #fff;
-    bottom: 0.25rem;
-    content: "";
-    width: 20px;
-    height: 20px;
-    left: 0.25rem;
-    position: absolute;
-    transition: .4s;
-  }
-    input:checked + .slider:before {
-    transform: translateX(16px);
-  }
+    .left-col, .right-col {
+      width: 100%; /* Prend toute la largeur disponible */
+    }
   
-  .slider.round {
-    border-radius: 15px;
+    .left-col img {
+      display: block; /* S'assure que le logo est affiché */
+      max-width: 1000px; /* Ajustez selon la taille souhaitée du logo */
+      height: 300px; /* Garde les proportions de l'image */
+      margin: 10px auto; /* Centrage du logo avec une marge */
+    }
+    
+    .right-col {
+      width: 80%; /* Ajuste la largeur du formulaire et du contenu associé */
+      max-width: 400px; /* Vous pouvez ajuster cette valeur */
+      text-align: center;
+    }
+    .maill{
+      margin-left: 100px;
+    }
+    .available{
+      margin-left: 50px;
+
+    }
+    
+    input, textarea, label {
+      width: 100%; /* Permet aux champs de formulaire de remplir la largeur du conteneur */
+      padding-bottom: 10px;
+    }  }
+
+
+
+  @media screen and (max-width: 500px) {
+
+    .left-col {
+      width: 125%; /* Augmente légèrement la largeur pour les très petits écrans, tout en conservant une marge */
+    max-width: 125%; /* Ajustez cette valeur si nécessaire */
   }
-  
-  .slider.round:before {
-    border-radius: 50%;
+    .right-col {
+    width: 100%; /* Augmente légèrement la largeur pour les très petits écrans, tout en conservant une marge */
+    max-width: 500px; /* Ajustez cette valeur si nécessaire */
+    height: 200%;
+    max-height: 20000px;
   }
-  
+.form-section {
+  flex-direction: column; /* Change l'orientation de flex pour empiler verticalement */
+  margin-left:25vw ;
+  width: 100%;
+  text-align: center;
+}
+
+.form-left,
+.form-right {
+  flex-basis: 100%; /* Permet aux éléments de prendre toute la largeur */
+}
+
+.formm{
+  width: 100%;
+}
+.form-right form {
+  padding-top: 0.2rem; /* Ajuste le padding au sommet du formulaire pour moins d'espace */
+  width: 100%;
+}
   }

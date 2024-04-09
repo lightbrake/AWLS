@@ -49,6 +49,27 @@ body{
         display: none;
 
       }
+
+      .sidebar {
+        display: none; /* Hidden by default */
+        position: fixed;
+        top: 0;
+        right: -250px; /* Start off the screen */
+        width: 250px;
+        height: 100%;
+        background-color: black;
+        z-index: 11;
+        transition: right 0.3s;
+      }
+      
+      .sidebar a {
+        display: block;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        border-bottom: 1px solid grey;
+      }
+          
       
         .top{
         display: inline-block;
@@ -88,7 +109,7 @@ body{
   
     .titrebleu {
       padding-top: 10px;
-      color: #40B6FF ;
+      color: #1988ff ;
 
     }
     .text-content h2 {
@@ -115,12 +136,12 @@ body{
     .text-content button {
         padding: 10px 20px;
         border: none;
-        border-radius: 0.6rem;
+        border-radius: 0.2rem;
         background-color: #6200ea; /* Ajustez la couleur du fond du bouton en fonction de votre design */
         color: #fff;
-        font-size: 1em;
+        font-size: 1.2em;
         cursor: pointer;
-        transform: translate(0%,-60%);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     }
     
@@ -220,6 +241,20 @@ body{
       font-size: 1.4vw; /* Taille de la police du paragraphe */
   }
       
+
+
+  
+.button-container {
+  text-align: center; /* Centers the button */
+  margin-top: 20px; /* Space above the button */
+  transform: translate(12%,-120%);
+
+}
+
+
+
+
+
   .clients-section {
     text-align: center;
     margin-bottom: 20px; /* Ajustez selon l'espacement désiré */
@@ -262,22 +297,284 @@ body{
       
       
       
+     .offres {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* This creates space between the boxes */
+}
+
+.box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  color: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.box-header {
+  background-color: #1988ff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.25em;
+}
+
+.box-content {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.point:not(:last-child) {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.point svg {
+  margin-right: 10px;
+}
+
+.box-footer {
+  padding: 20px;
+  text-align: center;
+  margin-top: auto; /* Pushes the footer to the bottom of the flex container */
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1988ff;
+  color: white;
+  text-decoration: none;
+  border: none;
+  font-size: 1.1em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
       
       
       
-      
-      
-      
-      
-      
-      
+    
+
+
+:root {
+  --primary-color: #FCFDFD;
+  --secondary-color: #1988ff;
+
+  /* #818386*
+  bleu hover #4169e1 */
+  --bg-color: #171212; 
+  --button-color: #818386;
+  --h1-color: #FCFDFD;
+}
+
+
+.form-section {
+  align-items: center;
+  display: flex;
+  justify-content: space-around; /* Spacing adjustment */
+  padding: 2rem; /* Margins on the sides */
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+}
+
+.form-left,
+.form-right {
+  flex-basis: 48%; /* Adjusts for spacing */
+}
+
+.form-left h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--h1-color);
+}
+
+.form-left p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: white;
+  width: auto; /* Adjust text width as per content */
+}
+
+.form-left img {
+  max-width: 100%;
+  height: auto;
+}
+
+.form-right form {
+  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  display: block;
+}
+.form-group label,
+.form-group input,
+.form-group textarea {
+  display: block; /* Ensures each label and input/textarea takes up the full width */
+  width: 100%; /* Ensures inputs take full width available */
+  margin-bottom: 0.5rem; /* Adds some space below each label/input */
+}
+
+input, textarea {
+  color: var(--primary-color);
+  font-weight: 500;
+  background: var(--bg-color);
+  border: none;
+  border-bottom: 1px solid var(--secondary-color);
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+  opacity: 0.8;
+}
+
+button {
+  background-color: var(--button-color);
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#error,
+#success-msg {
+  color: var(--secondary-color);
+  margin-top: 1rem;
+}
+
+.footer-section {
+  background-color: var(--bg-color);
+  color: #ffffff;
+  padding: 1rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer {
+  border-top: 1px solid white; /* Ligne de démarcation blanche en haut */
+  padding-top: 10PX;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+  flex-basis: calc(33.333% - 20px); /* Adjust based on padding and gap */
+}
+
+.footer h2 {
+  margin: 0 0 1rem;
+}
+
+.footer p {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin: 0.5rem 0;
+}
+
+.footer-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.social-icons{
+  margin-left:7.5px ;
+}
+.social-icons svg  {
+  height: 20px;
+  width: max-content;
+  margin-right: 0.5rem;
+  color: white;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  
+}
+
+.contact-btn {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.footer-bottom p {
+  font-size: 0.8rem;
+}
+
+
 
 
   /*  carousel */
   
       @media(max-width:900px){
 
-        
+     .top{
+      display:none;
+     }   
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -286,6 +583,7 @@ body{
       align-items: center;
       top:0px ;
       width: 98%;
+      height: 5%;
       
     } 
     .navbar-left  {
@@ -306,83 +604,257 @@ body{
     display: none; /* Cacher le logo et les liens pour les petits écrans */
     }
     .navbar-right img{
-      display: flex;
-      position: absolute;
-      right: 20px;
-      top: -6px;
-      width: 2.3rem;
+      display: block; /* Show hamburger icon */
+      cursor: pointer;
+     
 
     }
-    .main{
-      display: flex;
-      flex-direction: column-reverse;
-      flex-wrap: wrap;
-      align-items: center; 
-      margin-top: -60px;
-      width: 100%;
-      overflow-x: hidden; 
-      padding-left: 1rem;
+    .sidebar{
+      display: block;
+      font-size:1.5rem;
     }
+    
+    
 
     
-    .main-right{
+    
+    
+    .content-wrapper {
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      grid-row: 1/2;
+      text-align: center;
+  }
+
+  .text-content  {
+    
+      width: 100%; /* Ajuster en fonction de la marge souhaitée */
+      flex-basis: auto; /* Annuler le flex-basis précédent */
+      padding: 10px; /* Ajouter un peu d'espace */
+      padding-left: 2vw;
+  }
+
+  .text-content img {
+      width: 60%; /* Adapter l'image pour qu'elle remplisse la largeur */
+      transform: translate(0%,0%); /* Annuler la transformation précédente */
+      padding-bottom: 0px;
+  }
+
+  
+
+  .video-content {
+    display: flex; /* Ajoutez cette ligne pour activer Flexbox ici */
+    align-items: center;
+    padding-top: 1.5%;
+    padding-left: 2vw;
+
+    width: 90vw; /* Assurez-vous que cela remplit la largeur désirée */
+    justify-content: center;
+}
+
+  .video-content img {
+      width: 110%;
+      transform: translate(0%,-30%); /* Annuler la transformation précédente */
     }
 
-    .main-right img{
-     width: 90vw;
+  .elementor-background-video-embed {
+      transform: translate(0%,5%); /* Annuler la transformation précédente */
+       /* Adapter la bordure pour les petits écrans */
+  }
 
-    }
+  .text-content {
+      top: auto; /* Annuler le positionnement précédent */
+      transform: translateY(0); /* Centrer verticalement */
+  }
+  .text-content h1{
+    padding-bottom: 0;
+  }
+  .text-content p {
+    padding-top: 0%;
+    transform: translate(0%,0%);
+    line-height: 1.3; /* Ajustez cette valeur selon vos besoins */
+}
 
-    .main-left{
-      grid-row: 1/3;
-      padding-left: 0px;
-      padding-top: 10px;
+.background-container {
+  display: flex;
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
+  justify-content: center; /* Centre les éléments horizontalement */
+  gap: 20px; /* Ajoute un espace entre les éléments lorsqu'ils se déplacent à la ligne */
+  height: fit-content;/* Autres styles restent inchangés */
+  
+}
+.background-container::before {
+  height:110%;
 
-      width: 85vw;
-    }
-    .welcome{
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-    }
-    .main-left h1{
-      font-size: 1.3rem;
-      margin: 0.4rem 0;
-      line-height: 1.9rem;
-    }
-    .description {
-      color: #e6e5e5; /* Changez la couleur du texte selon votre choix */
-      margin-bottom: 1.2rem;
-      line-height: 20px;
-    }
-    .explore-button {
-      background-color: #ffffff; /* Changez la couleur de fond du bouton selon votre choix */
-      color: black;
-      border: none;
-      padding: 10px 30px;
-      font-size: 1.05rem;
-      border-radius: 5px; /* Arrondit les coins du bouton */
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .explore-button:hover {
-      background-color: #171212; /* Changez la couleur de fond du bouton au survol */
-    }
-      }
+  
+}
 
-      @media (max-width: 550px) {
-        .embed-responsive iframe {
-          transform: translateX(12%);
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          border: 0;
-        }
-      }
+.service-box {
+  width: 40%; /* Ajuste la largeur pour plus d'espace */
+  margin: 10px; /* Ajoute un peu de marge autour des boîtes */
+  height: auto; /* Permet aux boîtes de s'ajuster en hauteur selon le contenu */
+}
+.button-container{
+  margin-top: 110px;
+  transform: translate(-6%,-120%);
 
+
+}
+
+.clients-section {
+  text-align: center;
+  margin-bottom: 20px; /* Ajustement de l'espacement selon les besoins */
+  padding-top: 2rem;
+  max-width: 100vw;
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 180vw;
+}
+.splide{
+  max-width: 150vw;
+  margin: 0 auto;
+}
+
+
+.container {
+  flex-direction: column; /* Change la disposition en colonne */
+  align-items: center; /* Centre les éléments horizontalement */
+}
+
+.box {
+  width: 90%; /* Ajuste la largeur des boîtes pour qu'elles ne prennent pas toute la largeur de l'écran */
+  margin-bottom: 10px; /* Ajoute de l'espace entre les boîtes */
+}
+
+
+
+.footer {
+  justify-content: center;
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+  flex-basis: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  margin-bottom: 1rem;
+}
+}
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+
+  .text-content  {
+    margin-left: 25vw;
+    width: 100vw;
+  }
+  .video-content{
+    margin-left: 25vw;
+    width: 110vw;
+
+  }
+
+
+  .service-box {
+    width: 80%; /* Permet à chaque boîte de prendre plus d'espace horizontal */
+    margin: 10px auto; /* Augmente la marge et centre les boîtes */
+    font-size: smaller; /* Optionnel : réduit la taille de la police pour économiser de l'espace */
+}
+
+.service-box h4 {
+    font-size: 3.5vw; /* Ajuste la taille de la police pour une meilleure lisibilité à de petites résolutions */
+}
+
+.background-container {
+  margin-left: 22.2vw;
+}
+.service-box{
+  margin-left: 9.5vw;
+}
+.button-container{
+  margin-left: 27.5vw;
+}
+
+.clients-section{
+ margin-left: 25vw;
+ max-width: 130vw;
+ width: 125vw;
+}
+.splide {
+  width:70%; /* Ajustez cette valeur pour agrandir le carrousel */
+  max-width: 12000px; /* Ajustez cette valeur pour définir une largeur maximale */
+  margin: 0 auto; /* Centre le carrousel */
+
+}
+
+.splide__track {
+}
+
+.splide__list {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.offres{
+  margin-left: 25vw;
+}
+.box {
+  font-size: 0.8rem;
+  width: 100%; /* Permet aux boîtes de prendre presque toute la largeur de l'écran */
+}
+
+.box-header, .box-content, .box-footer {
+  padding: 15px; /* Réduit le padding pour économiser de l'espace */
+}
+
+
+.form-section {
+  flex-direction: column; /* Change l'orientation de flex pour empiler verticalement */
+  margin-left:25vw ;
+  width: 100%;
+  text-align: center;
+}
+
+.form-left,
+.form-right {
+  flex-basis: 100%; /* Permet aux éléments de prendre toute la largeur */
+}
+
+
+.form-right form {
+  padding-top: 0.2rem; /* Ajuste le padding au sommet du formulaire pour moins d'espace */
+  width: 110%;
+}
+
+.contact-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.footer{
+
+  margin-left:25vw ;
+
+}
+.footer-bottom{
+text-align: center;
+margin-left:30vw ;
+
+}
+}
+
+
+      
       
 
