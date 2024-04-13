@@ -1,0 +1,346 @@
+
+:root {
+    --primary-color: #FCFDFD;
+    --secondary-color: #1988ff;
+  
+    /* #818386*
+    bleu hover #4169e1 */
+    --bg-color: #171212; 
+    --button-color: #818386;
+    --h1-color: #FCFDFD;
+  }
+  
+
+
+body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    background-color: #171212; /* Ajustez cette couleur pour correspondre à votre conception */
+    font-family: Arial, sans-serif;
+    color: white;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 1rem; /* padding horizontal ajusté pour le contenu de la barre de navigation */
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 45px;
+    width: 97.5%;
+    background-color: black; /* Transparence maintenue */
+    z-index: 10;
+}
+
+.navbar-left {
+    display: flex;
+    padding: 8px;
+    gap: 12px; /* L'espace entre les éléments à gauche */
+}
+
+.navbar-right {
+    display: flex;
+    padding: 15px;
+    gap: 20px; /* L'espace entre les éléments à droite */
+    width: auto;
+}
+
+.navbar-right a {
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    margin-right: 10px; /* L'espace entre les liens */
+}
+      .navbar-right img{
+        display: none;
+
+      }
+
+      .sidebar {
+        display: none; /* Hidden by default */
+        position: fixed;
+        top: 0;
+        right: -250px; /* Start off the screen */
+        width: 250px;
+        height: 100%;
+        background-color: black;
+        z-index: 11;
+        transition: right 0.3s;
+      }
+      
+      .sidebar a {
+        display: block;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        border-bottom: 1px solid grey;
+      }
+          
+        
+      .header-section {
+        position: relative;
+        width: 100%;
+        height: 21.2rem; /* Ajustez selon la hauteur souhaitée */
+        background-image: url('../../Content/27-P1012729-scaled.jpg'); /* Remplacez avec le chemin de votre image */
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      
+      .header-title {
+        color: white;
+        font-size: 3rem; /* Taille du titre */
+        z-index: 2;
+      }
+      
+      .header-section::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(14, 0, 0) 100%);
+        z-index: 1;
+      }
+         
+
+
+
+.content h1{
+    color: var(--secondary-color);
+  }
+  
+
+
+.video-production-section {
+    border-top: 1px solid white; /* Ligne de démarcation blanche en haut */
+    margin: 0 5%;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    line-height: 1.3;
+  }
+  
+  .content {
+    max-width: 60%;
+  }
+  
+  .image-container {
+    max-width: 25%;
+    border: 2px solid #ffffff; /* Cadre blanc autour de l'image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FCFDFD; 
+ }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .contact-button {
+    
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent; /* Fond transparent */
+    color: var(--secondary-color); /* Texte bleu */
+    border: 2px solid var(--secondary-color); /* Bordure bleue */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s; /* Animation douce pour le survol */
+  
+  }
+  .contact-button:hover {
+    background-color: #4ea3ff; /* Fond bleu au survol */
+    color: white; /* Texte blanc au survol */
+    cursor: pointer;
+  }
+  
+
+
+
+  .footer-section {
+    background-color: var(--bg-color);
+    color: #ffffff;
+    padding: 1rem;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer {
+    border-top: 1px solid white; /* Ligne de démarcation blanche en haut */
+    padding-top: 10PX;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+  }
+  
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    flex-basis: calc(33.333% - 20px); /* Adjust based on padding and gap */
+  }
+  
+  .footer h2 {
+    margin: 0 0 1rem;
+  }
+  
+  .footer p {
+    margin: 0 0 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin: 0.5rem 0;
+  }
+  
+  .footer-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .social-icons{
+    margin-left:7.5px ;
+  }
+  .social-icons svg  {
+    height: 20px;
+    width: max-content;
+    margin-right: 0.5rem;
+    color: white;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    
+  }
+  
+  .contact-btn {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }
+  
+  
+  @media (max-width: 900px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.4rem;
+        position: fixed;
+        align-items: center;
+        top:0px ;
+        width: 98%;
+        height: 7%;
+        
+      } 
+      .navbar-left  {
+        display: flex;
+        gap: 2px;
+        padding:2px;
+        left: 0px;
+        width: 10px;
+      }
+    
+    .navbar-right {
+      display: flex;
+    position: fixed;
+    right: 8px;
+    }
+  
+    .navbar-right a {
+      display: none; /* Cacher le logo et les liens pour les petits écrans */
+      }
+      .navbar-right img{
+        display: block; /* Show hamburger icon */
+        cursor: pointer;
+       
+  
+      }
+      .sidebar{
+        display: block;
+        font-size:1.5rem;
+      }
+      
+
+    .video-production-section {
+        flex-direction: column;
+        align-items: center; /* Centre les éléments horizontalement */
+      }
+      
+      .content {
+        order: 2; /* Le contenu textuel est placé après l'image */
+        max-width: 100%; /* Permet au texte de remplir la largeur */
+        text-align: center; /* Centre le texte */
+      }
+      
+      .image-container {
+        order: 1; /* L'image est placée en premier */
+        width: 60%; /* L'image prend 60% de la largeur de son conteneur */
+        max-width: 100%; /* S'assure que l'image ne dépasse pas la largeur du conteneur */
+        margin-bottom: 20px; /* Ajoute de l'espace entre l'image et le texte */
+        border: 2px solid #ffffff; /* Conserve le cadre blanc autour de l'image */
+        background-color: var(--primary-color); /* Couleur de fond pour le conteneur de l'image */
+      }
+      
+      .image-container img {
+        width: 60%; /* L'image remplit la largeur du conteneur de l'image */
+      }
+      
+      .contact-button {
+        order: 3; /* Le bouton est placé après le contenu textuel */
+        display: block; /* Le bouton prendra toute la largeur disponible */
+        margin: 20px auto; /* Centre le bouton horizontalement */
+        padding: 10px 20px; /* Padding pour le bouton */
+      }
+
+      
+.footer {
+    justify-content: center;
+  }
+  
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .social-icons {
+    margin-bottom: 1rem;
+  }
+  }
+  

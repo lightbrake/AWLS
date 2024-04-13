@@ -583,7 +583,7 @@ button:hover {
       align-items: center;
       top:0px ;
       width: 98%;
-      height: 5%;
+      height: 7%;
       
     } 
     .navbar-left  {
@@ -616,65 +616,77 @@ button:hover {
     
     
 
-    
-    
-    
     .content-wrapper {
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-  }
-
-  .text-content  {
-    
-      width: 100%; /* Ajuster en fonction de la marge souhaitée */
-      flex-basis: auto; /* Annuler le flex-basis précédent */
-      padding: 10px; /* Ajouter un peu d'espace */
-      padding-left: 2vw;
-  }
-
-  .text-content img {
-      width: 60%; /* Adapter l'image pour qu'elle remplisse la largeur */
-      transform: translate(0%,0%); /* Annuler la transformation précédente */
-      padding-bottom: 0px;
-  }
-
-  
-
-  .video-content {
-    display: flex; /* Ajoutez cette ligne pour activer Flexbox ici */
-    align-items: center;
-    padding-top: 1.5%;
-    padding-left: 2vw;
-
-    width: 90vw; /* Assurez-vous que cela remplit la largeur désirée */
-    justify-content: center;
-}
-
-  .video-content img {
-      width: 110%;
-      transform: translate(0%,-30%); /* Annuler la transformation précédente */
+      margin-top: 350px;
+      padding-bottom: 60px; /* Ajout d'espace en bas pour éviter le chevauchement */
     }
+    
+    .text-content {
+      width: 100%; /* Utilisation de la largeur complète pour le texte */
+      padding: 20px; /* Un peu plus d'espace autour du texte */
+      order: 1; /* Assure que le texte apparaît en premier */
+    }
+    
+    .text-content img {
+      width: 60%; /* Taille de l'image ajustée pour mieux s'adapter */
+      margin-bottom: 0px; /* Espace ajouté sous l'image */
+      transform: none;
+      padding-bottom: 0;
+    }
+    .text-content h1 {
+      transform: translate(0%,-50px);
 
-  .elementor-background-video-embed {
-      transform: translate(0%,5%); /* Annuler la transformation précédente */
-       /* Adapter la bordure pour les petits écrans */
-  }
+    }
+    .text-content h2 {
+      transform: translate(0%,-50px);
 
-  .text-content {
-      top: auto; /* Annuler le positionnement précédent */
-      transform: translateY(0); /* Centrer verticalement */
-  }
-  .text-content h1{
-    padding-bottom: 0;
-  }
-  .text-content p {
-    padding-top: 0%;
-    transform: translate(0%,0%);
-    line-height: 1.3; /* Ajustez cette valeur selon vos besoins */
-}
+    }
+    .text-content p {
+      transform: translate(0%,-50px);
 
+    }
+    .text-content button{
+        transform: translate(0%,-20px);
+  
+      
+     
+    }
+   
+    .video-content {
+      width: 60%; /* Utilise toute la largeur pour la vidéo */
+  height: auto; /* Hauteur auto pour éviter le débordement */
+  order: 2; /* La vidéo vient après le texte */
+  padding-top: 0; /* Aucun padding au-dessus */
+  display: flex;
+  justify-content: center; /* Centre la vidéo horizontalement */
+  margin-bottom: 70px;
+    }
+    
+    .video-content img {
+      width: 80vw; /* L'image de fond prend toute la largeur */
+      height: auto; /* Hauteur ajustée automatiquement */
+      position: relative; /* S'assure que l'image n'affecte pas la position d'autres éléments */
+      opacity: 0.5; /* Transparence pour voir le contenu au-dessus */
+      z-index: -1; /* Positionne l'image derrière le texte et la vidéo */
+      margin-left: 50px;
+      transform: none;
+      transform: translate(-5%,-80%);
+
+
+    }
+    
+    .elementor-background-video-embed {
+      width: 100%; /* La vidéo prend toute la largeur disponible */
+      height: 300px; /* Hauteur fixe pour la vidéo */
+      order: 2; /* Assure que la vidéo est positionnée entre le texte et l'image de fond */
+      transform: none; /* Annule toutes les transformations précédentes */
+
+    }
+    
 .background-container {
   display: flex;
   flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
@@ -753,18 +765,22 @@ button:hover {
 
 @media screen and (max-width: 500px) {
 
-
+.content-wrapper{
+  margin-top: 220px;
+}
   .text-content  {
     margin-left: 25vw;
     width: 100vw;
   }
   .video-content{
     margin-left: 25vw;
-    width: 110vw;
-
+    width: 100%;
+    padding-top: 0;
   }
 
-
+.elementor-background-video-embed{
+  height: auto;
+}
   .service-box {
     width: 80%; /* Permet à chaque boîte de prendre plus d'espace horizontal */
     margin: 10px auto; /* Augmente la marge et centre les boîtes */

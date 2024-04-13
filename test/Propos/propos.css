@@ -1,0 +1,419 @@
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 1rem; /* padding horizontal ajusté pour le contenu de la barre de navigation */
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 45px;
+    width: 97.5%;
+    background-color: black; /* Transparence maintenue */
+    z-index: 20;
+}
+
+.navbar-left {
+    display: flex;
+    padding: 8px;
+    gap: 12px; /* L'espace entre les éléments à gauche */
+}
+
+.navbar-right {
+    display: flex;
+    padding: 15px;
+    gap: 20px; /* L'espace entre les éléments à droite */
+    width: auto;
+}
+
+.navbar-right a {
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    margin-right: 10px; /* L'espace entre les liens */
+}
+      .navbar-right img{
+        display: none;
+
+      }
+
+      .sidebar {
+        display: none; /* Hidden by default */
+        position: fixed;
+        top: 0;
+        right: -250px; /* Start off the screen */
+        width: 250px;
+        height: 100%;
+        background-color: black;
+        z-index: 11;
+        transition: right 0.3s;
+      }
+      
+      .sidebar a {
+        display: block;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        border-bottom: 1px solid grey;
+      }
+          
+:root {
+    --primary-color: #FCFDFD;
+    --secondary-color: #1988ff;
+  
+    /* #818386*
+    bleu hover #4169e1 */
+    --bg-color: #171212; 
+    --button-color: #818386;
+    --h1-color: #FCFDFD;
+  }
+  
+
+
+body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    background-color: #171212; /* Ajustez cette couleur pour correspondre à votre conception */
+    font-family: Arial, sans-serif;
+    color: white;
+    
+}
+
+  
+      .header-section {
+        position: relative;
+        width: 100%;
+        height: 21.2rem; /* Ajustez selon la hauteur souhaitée */
+        background-image: url('../../Content/propo.jpg'); /* Remplacez avec le chemin de votre image */
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      
+      .header-title {
+        color: white;
+        font-size: 3rem; /* Taille du titre */
+        z-index: 2;
+      }
+      
+      .header-section::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(14, 0, 0) 100%);
+        z-index: 1;
+      }
+         
+
+
+
+.floating-box {
+    background-color: white;
+    width: 80%; /* ou une largeur fixe en px si vous préférez */
+    margin: 1rem auto;
+    padding: 2rem;
+    box-shadow: 4px 4px 6px rgba(210, 233, 255, 0.35);
+    border: 2px solid var(--secondary-color); /* Cadre bleu autour de la boîte */
+    background-color: rgba(255, 255, 255, 0.3); /* Fond légèrement transparent */
+    backdrop-filter: blur(10px); /* Floue l'arrière-plan pour un effet "flottant" */
+    color: var(--primary-color);
+    font-family: Arial, sans-serif;
+    position: relative;
+    z-index: 10;
+    border-radius: 2%;
+  }
+  
+  
+  .center-bold {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 2rem; /* Espace avant le paragraphe centré et en gras */
+    margin-bottom: 2rem; /* Espace après le paragraphe centré et en gras */
+  }
+  
+  ul {
+    padding-left: 20px; /* Ajuste le padding à gauche pour les puces */
+  }
+  .team-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+    background-color: var(--bg-color);
+    color: #ffffff;
+    padding: 2rem;
+  }
+  
+  .eqip {
+    margin-bottom: 3rem; /* Augmente l'espace entre le titre et les photos */
+  }
+  
+  .team-title {
+    text-align: center;
+    margin-bottom:35px;
+  }
+  
+  .team-photos {
+    display: flex;
+    justify-content: center;
+    gap: 250px; /* Augmente l'espacement entre les images */
+  }
+  
+  .team-photo {
+    width: 200px; /* Ajustez selon la taille souhaitée des photos */
+    height: 200px; /* Ajustez pour garder les images carrées */
+    object-fit: cover; /* Assure que les images remplissent la taille sans déformation */
+    border-radius: 35%; /* Rend les images rondes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ajoute de l'ombre derrière les images */
+    transition: transform 0.3s ease; /* Animation douce pour le changement de position */
+  }
+  
+
+  .values-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Ajustez l'espacement entre les boîtes */
+    text-align: center;
+    align-items: stretch;
+    margin: 2rem auto;
+    padding: 2rem;
+
+  }
+  
+  
+.floating-boxx {
+  background-color: white;
+  width: 80%; 
+  flex-grow: inherit;/* ou une largeur fixe en px si vous préférez */
+  margin: 1rem auto;
+  padding: 2rem;
+  box-shadow: 4px 4px 6px rgba(210, 233, 255, 0.35);
+  border: 2px solid var(--secondary-color); /* Cadre bleu autour de la boîte */
+  background-color: rgba(255, 255, 255, 0.3); /* Fond légèrement transparent */
+  backdrop-filter: blur(10px); /* Floue l'arrière-plan pour un effet "flottant" */
+  color: var(--primary-color);
+  font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 10;
+  border-radius: 2%;
+}
+.floating-boxx p{
+  font-size: 0.8rem;
+}
+  
+  
+  .value-title {
+    margin-top: 0.5rem;
+    color: var(--secondary-color);
+  }
+  
+  .value-text {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+  }
+
+  .val{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-section {
+    background-color: var(--bg-color);
+    color: #ffffff;
+    padding: 1rem;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer {
+    border-top: 1px solid white; /* Ligne de démarcation blanche en haut */
+    padding-top: 10PX;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+  }
+  
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    flex-basis: calc(33.333% - 20px); /* Adjust based on padding and gap */
+  }
+  
+  .footer h2 {
+    margin: 0 0 1rem;
+  }
+  
+  .footer p {
+    margin: 0 0 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin: 0.5rem 0;
+  }
+  
+  .footer-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .social-icons{
+    margin-left:7.5px ;
+  }
+  .social-icons svg  {
+    height: 20px;
+    width: max-content;
+    margin-right: 0.5rem;
+    color: white;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    
+  }
+  
+  .contact-btn {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }
+  @media (max-width: 900px) {
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.4rem;
+        position: fixed;
+        align-items: center;
+        top:0px ;
+        width: 98%;
+        height: 7%;
+        
+      } 
+      .navbar-left  {
+        display: flex;
+        gap: 2px;
+        padding:2px;
+        left: 0px;
+        width: 10px;
+      }
+    
+    .navbar-right {
+      display: flex;
+    position: fixed;
+    right: 8px;
+    }
+  
+    .navbar-right a {
+      display: none; /* Cacher le logo et les liens pour les petits écrans */
+      }
+      .navbar-right img{
+        display: block; /* Show hamburger icon */
+        cursor: pointer;
+       
+  
+      }
+      .sidebar{
+        display: block;
+        font-size:1.5rem;
+      }
+      
+
+    .floating-box {
+      width: 75%; /* Ajuste la largeur pour les appareils plus petits */
+    }
+  
+    .floating-box h1, .floating-box p, .floating-box ul {
+      font-size: smaller; /* Réduit la taille du texte pour les petits écrans */
+    }
+
+    .team-photos {
+        flex-direction: column; /* Les photos s'empilent verticalement */
+        gap: 25px;
+
+      }
+    
+      .team-photo {
+        margin-bottom: -50px; /* Superpose les photos avec un décalage vertical */
+        transition: transform 0.3s ease;
+
+      }
+    
+      .team-photo:nth-child(1) {
+        transform: translateX(-60px); /* Déplace la première photo à gauche */
+      }
+    
+      .team-photo:nth-child(3) {
+        transform: translateX(60px); /* Déplace la troisième photo à droite */
+      }
+    
+      /* Annule la marge négative pour la dernière image */
+      .team-photo:last-child {
+        margin-bottom: 0;
+      }
+  
+      .values-section {
+        flex-direction: column;
+        align-items: center;
+
+      }
+    
+      .value-box {
+        transform: translateY(0); /* Réinitialise la position des boîtes */
+        margin-bottom: -1rem; /* Ajuste l'espacement entre les boîtes */
+
+      }
+    
+      .value-box:last-child {
+        margin-bottom: 0; /* Annule la marge négative pour la dernière boîte */
+      }
+
+            
+.footer {
+    justify-content: center;
+  }
+  
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .social-icons {
+    margin-bottom: 1rem;
+  }
+  }
+  

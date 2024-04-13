@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Gallery.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Géstion De Projet CRUD</h1>
+        <div id="input-container">
+          <input type="text" id="title-input" placeholder="Entrez le titre du projet" />
+          <textarea id="description-input" placeholder="Entrez la description"></textarea>
+          <input type="date" id="start-date-input" placeholder="Date de début" />
+          <input type="date" id="end-date-input" placeholder="Date de fin" />
+          <input type="number" id="budget-input" placeholder="Budget estimé" />
+          <button id="add-btn">Ajouter</button>
+          <button id="update-btn" style="display:none;">Mettre à jour</button>
+          <button id="cancel-btn" style="display:none;">Annuler</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Titre</th>
+              <th>Description</th>
+              <th>Date de début</th>
+              <th>Date de fin</th>
+              <th>Budget</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            
+          </tbody>
+        </table>
+      </div>
+      <script src="Gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+
+:root {
+    --primary-color: #FCFDFD;
+    --secondary-color: #1988ff;
+  
+    /* #818386*
+    bleu hover #4169e1 */
+    --bg-color: #171212; 
+    --button-color: #818386;
+    --h1-color: #FCFDFD;
+  }
+  
+  body {
+    background-color: #171212; /* Couleur de fond noir */
+    color: #FCFDFD; /* Texte en blanc */
+    font-family: Arial, sans-serif;
+  }
+  
+  #container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--bg-color); /* Arrière-plan légèrement différent pour le conteneur */
+  }
+  
+  h1 {
+    color: var(--secondary-color);
+    text-align: center;
+  }
+  
+  #input-container {
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="number"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: transparent; /* Fond transparent */
+    border: 2px solid var(--secondary-color); /* Bordure bleue */
+    border-radius: 4px;
+    color: #ffffff; /* Texte en blanc */
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--secondary-color); /* Fond bleu */
+    color: #ffffff; /* Texte en blanc */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #4169e1; /* Couleur de fond au survol */
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid var(--secondary-color); /* Bordure des cellules en bleu */
+  }
+  
+  th {
+    background-color: var(--secondary-color); /* Fond des en-têtes en bleu */
+    color: #ffffff;
+  }
+  
+  .edit-btn, .delete-btn {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color); /* Bordure des boutons en bleu */
+    padding: 5px 10px;
+    margin-right: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .edit-btn:hover, .delete-btn:hover {
+    background-color: var(--secondary-color); /* Fond bleu au survol */
+    color: #ffffff;
+  }
+  
