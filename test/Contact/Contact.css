@@ -16,7 +16,9 @@
     transition: all 0.3s ease-in-out;
   }
   
-  
+  body{
+    background-color: var(--bg-color);
+  }
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -287,41 +289,49 @@ p a {
     }
   
     .left-col, .right-col {
-      width: 100%; /* Prend toute la largeur disponible */
+      width: 150%; /* Prend toute la largeur disponible */
     }
   
     .left-col img {
       display: block; /* S'assure que le logo est affiché */
-      max-width: 1000px; /* Ajustez selon la taille souhaitée du logo */
+      max-width: 900px; /* Ajustez selon la taille souhaitée du logo */
+      width: 10%;
       height: 300px; /* Garde les proportions de l'image */
       margin: 10px auto; /* Centrage du logo avec une marge */
     }
     
     .right-col {
-      width: 80%; /* Ajuste la largeur du formulaire et du contenu associé */
-      max-width: 400px; /* Vous pouvez ajuster cette valeur */
+      width: 100%; /* Ajuste la largeur du formulaire et du contenu associé */
+      max-width: 900px; /* Vous pouvez ajuster cette valeur */
       text-align: center;
+      margin-left: 30vw;
     }
     .maill{
-      margin-left: 100px;
+      margin-left: 40vw;
     }
     .available{
-      margin-left: 50px;
+      margin-left: 30vw;
 
     }
     
     input, textarea, label {
       width: 100%; /* Permet aux champs de formulaire de remplir la largeur du conteneur */
       padding-bottom: 10px;
-    }  }
+    } 
+  .form-section {
+  flex-direction: column; /* Change l'orientation de flex pour empiler verticalement */
+  margin-left:25vw ;
+  width: 100%;
+  text-align: center;
+} }
 
 
 
   @media screen and (max-width: 500px) {
 
     .left-col {
-      width: 125%; /* Augmente légèrement la largeur pour les très petits écrans, tout en conservant une marge */
-    max-width: 125%; /* Ajustez cette valeur si nécessaire */
+      width: 160%; /* Augmente légèrement la largeur pour les très petits écrans, tout en conservant une marge */
+    max-width: 160%; /* Ajustez cette valeur si nécessaire */
   }
     .right-col {
     width: 100%; /* Augmente légèrement la largeur pour les très petits écrans, tout en conservant une marge */

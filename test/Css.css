@@ -206,7 +206,7 @@ body{
     border: 10px solid rgba(255, 255, 255, 0.05); 
     background-size: cover; /* pour couvrir tout l'espace disponible */
     background-position: center; /* pour centrer l'image */
-    opacity: 0.3; /* ajustez l'opacité selon vos besoins */
+    opacity: 0.22; /* ajustez l'opacité selon vos besoins */
     z-index: -1; /* s'assure que le fond est derrière le contenu */
       
 
