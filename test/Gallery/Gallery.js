@@ -19,9 +19,8 @@ document.getElementById('admin-btn').addEventListener('click', function() {
 
 document.getElementById('admin-password').addEventListener('keypress', function(e) {
   if (e.key === 'Enter') {
-      // Transformation simple pour la démonstration
       const transformedInput = this.value.split('').reverse().join('') + 'salt';
-      const expectedTransform = 'elgnairtsalt'; // "triangle" renversé + 'salt'
+      const expectedTransform = 'elgnairtsalt'; 
       
       if (transformedInput === expectedTransform) {
           document.getElementById('crud-table').style.display = 'block';
