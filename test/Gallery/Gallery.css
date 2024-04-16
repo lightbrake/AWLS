@@ -1,4 +1,63 @@
 
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 1rem; /* padding horizontal ajusté pour le contenu de la barre de navigation */
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 45px;
+    width: 97.5%;
+    background-color: black; /* Transparence maintenue */
+    z-index: 20;
+}
+
+.navbar-left {
+    display: flex;
+    padding: 8px;
+    gap: 12px; /* L'espace entre les éléments à gauche */
+}
+
+.navbar-right {
+    display: flex;
+    padding: 15px;
+    gap: 20px; /* L'espace entre les éléments à droite */
+    width: auto;
+}
+
+.navbar-right a {
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    margin-right: 10px; /* L'espace entre les liens */
+}
+      .navbar-right img{
+        display: none;
+
+      }
+
+      .sidebar {
+        display: none; /* Hidden by default */
+        position: fixed;
+        top: 0;
+        right: -250px; /* Start off the screen */
+        width: 250px;
+        height: 100%;
+        background-color: black;
+        z-index: 11;
+        transition: right 0.3s;
+      }
+      
+      .sidebar a {
+        display: block;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        border-bottom: 1px solid grey;
+      }
+          
 :root {
     --primary-color: #FCFDFD;
     --secondary-color: #1988ff;
@@ -101,3 +160,44 @@
     color: #ffffff;
   }
   
+  @media (max-width: 900px) {
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.4rem;
+        position: fixed;
+        align-items: center;
+        top:0px ;
+        width: 98%;
+        height: 7%;
+        
+      } 
+      .navbar-left  {
+        display: flex;
+        gap: 2px;
+        padding:2px;
+        left: 0px;
+        width: 10px;
+      }
+    
+    .navbar-right {
+      display: flex;
+    position: fixed;
+    right: 8px;
+    }
+  
+    .navbar-right a {
+      display: none; /* Cacher le logo et les liens pour les petits écrans */
+      }
+      .navbar-right img{
+        display: block; /* Show hamburger icon */
+        cursor: pointer;
+       
+  
+      }
+      .sidebar{
+        display: block;
+        font-size:1.5rem;
+      }
+      
