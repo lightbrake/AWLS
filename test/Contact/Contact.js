@@ -48,9 +48,6 @@ function sendEmail(){
   <b>Message :</b>${message.value}
   `
   Email.send({
-    /*Host : "smtp.elasticemail.com",
-    Username : "uniterwp@gmail.com",
-    Password : "F0D966C606D2528E8EEB8F6FBF0D58241D79",*/
     SecureToken : "774437ee-c0e4-4f9b-b361-87d20389741c",
     To : [
       'ahmed@awlsprod.com',

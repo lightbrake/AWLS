@@ -12,6 +12,26 @@ let currentProjectIndex = null;
 let projects = JSON.parse(localStorage.getItem("projects")) || [];
 getProjects();
 let projectIdCounter = JSON.parse(localStorage.getItem("projectIdCounter")) || 1;
+document.getElementById('admin-btn').addEventListener('click', function() {
+  document.getElementById('admin-password').style.display = 'inline';
+  document.getElementById('admin-password').focus();
+});
+
+document.getElementById('admin-password').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+      // Transformation simple pour la démonstration
+      const transformedInput = this.value.split('').reverse().join('') + 'salt';
+      const expectedTransform = 'elgnairtsalt'; // "triangle" renversé + 'salt'
+      
+      if (transformedInput === expectedTransform) {
+          document.getElementById('crud-table').style.display = 'block';
+      } else {
+          alert('Mot de passe incorrect');
+      }
+      this.value = '';
+  }
+});
+
 
 // Create Project
 function createProject() {

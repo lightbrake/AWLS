@@ -46,6 +46,15 @@
     border-radius: 4px;
     color: #ffffff; /* Texte en blanc */
   }
+  #admin-password {
+    margin: 20px;
+    padding: 8px;
+    display: none; /* Initialement caché */
+  }
+  
+  #crud-table {
+    display: none; /* Caché jusqu'à ce que le mot de passe soit vérifié */
+  }
   
   button {
     padding: 10px 20px;
