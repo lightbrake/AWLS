@@ -74,6 +74,7 @@ function createProject() {
   projectIdCounter++;
   
   localStorage.setItem("projectIdCounter", JSON.stringify(projectIdCounter));
+  alert('Projet ajoutée');
 
   resetForm();
   saveData();
